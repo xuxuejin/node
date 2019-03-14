@@ -1,8 +1,6 @@
 ## node.js中的path模块
-
-  1、路径解析，得到规范化的路径格式，对window系统，目录分隔为'\', 对于UNIX系统，分隔符为'/'，针对'..'返回上一级；
-  /与\\都被统一转换path.normalize(p);
-
+  1、路径解析，对不同的操作系统得到规范化的路径格式
+  
     var myPath = path.normalize(__dirname + '/test/a//b//../c/utilyou.mp3');
     console.log(myPath);    //windows: E:\workspace\NodeJS\app\fs\test\a\c\utilyou.mp3
 
